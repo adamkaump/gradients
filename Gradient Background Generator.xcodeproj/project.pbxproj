@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACE237DA1A9846BA002588CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE237D91A9846BA002588CB /* AppDelegate.swift */; };
+		ACE237DC1A9846BA002588CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE237DB1A9846BA002588CB /* ViewController.swift */; };
+		ACE237DF1A9846BA002588CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE237DD1A9846BA002588CB /* Main.storyboard */; };
+		ACE237E11A9846BA002588CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACE237E01A9846BA002588CB /* Images.xcassets */; };
+		ACE237E41A9846BA002588CB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ACE237E21A9846BA002588CB /* LaunchScreen.xib */; };
+		ACE237F01A9846BA002588CB /* Gradient_Background_GeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE237EF1A9846BA002588CB /* Gradient_Background_GeneratorTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACE237EA1A9846BA002588CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACE237CC1A9846BA002588CB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACE237D31A9846BA002588CB;
+			remoteInfo = "Gradient Background Generator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ACE237D41A9846BA002588CB /* Gradient Background Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gradient Background Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE237D81A9846BA002588CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACE237D91A9846BA002588CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACE237DB1A9846BA002588CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACE237DE1A9846BA002588CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACE237E01A9846BA002588CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ACE237E31A9846BA002588CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ACE237E91A9846BA002588CB /* Gradient Background GeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Gradient Background GeneratorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE237EE1A9846BA002588CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACE237EF1A9846BA002588CB /* Gradient_Background_GeneratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient_Background_GeneratorTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACE237D11A9846BA002588CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACE237E61A9846BA002588CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACE237CB1A9846BA002588CB = {
+			isa = PBXGroup;
+			children = (
+				ACE237D61A9846BA002588CB /* Gradient Background Generator */,
+				ACE237EC1A9846BA002588CB /* Gradient Background GeneratorTests */,
+				ACE237D51A9846BA002588CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACE237D51A9846BA002588CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACE237D41A9846BA002588CB /* Gradient Background Generator.app */,
+				ACE237E91A9846BA002588CB /* Gradient Background GeneratorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACE237D61A9846BA002588CB /* Gradient Background Generator */ = {
+			isa = PBXGroup;
+			children = (
+				ACE237D91A9846BA002588CB /* AppDelegate.swift */,
+				ACE237DB1A9846BA002588CB /* ViewController.swift */,
+				ACE237DD1A9846BA002588CB /* Main.storyboard */,
+				ACE237E01A9846BA002588CB /* Images.xcassets */,
+				ACE237E21A9846BA002588CB /* LaunchScreen.xib */,
+				ACE237D71A9846BA002588CB /* Supporting Files */,
+			);
+			path = "Gradient Background Generator";
+			sourceTree = "<group>";
+		};
+		ACE237D71A9846BA002588CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACE237D81A9846BA002588CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACE237EC1A9846BA002588CB /* Gradient Background GeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACE237EF1A9846BA002588CB /* Gradient_Background_GeneratorTests.swift */,
+				ACE237ED1A9846BA002588CB /* Supporting Files */,
+			);
+			path = "Gradient Background GeneratorTests";
+			sourceTree = "<group>";
+		};
+		ACE237ED1A9846BA002588CB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ACE237EE1A9846BA002588CB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACE237D31A9846BA002588CB /* Gradient Background Generator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACE237F31A9846BA002588CB /* Build configuration list for PBXNativeTarget "Gradient Background Generator" */;
+			buildPhases = (
+				ACE237D01A9846BA002588CB /* Sources */,
+				ACE237D11A9846BA002588CB /* Frameworks */,
+				ACE237D21A9846BA002588CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gradient Background Generator";
+			productName = "Gradient Background Generator";
+			productReference = ACE237D41A9846BA002588CB /* Gradient Background Generator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACE237E81A9846BA002588CB /* Gradient Background GeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACE237F61A9846BA002588CB /* Build configuration list for PBXNativeTarget "Gradient Background GeneratorTests" */;
+			buildPhases = (
+				ACE237E51A9846BA002588CB /* Sources */,
+				ACE237E61A9846BA002588CB /* Frameworks */,
+				ACE237E71A9846BA002588CB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACE237EB1A9846BA002588CB /* PBXTargetDependency */,
+			);
+			name = "Gradient Background GeneratorTests";
+			productName = "Gradient Background GeneratorTests";
+			productReference = ACE237E91A9846BA002588CB /* Gradient Background GeneratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACE237CC1A9846BA002588CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0620;
+				ORGANIZATIONNAME = "Adam Kaump";
+				TargetAttributes = {
+					ACE237D31A9846BA002588CB = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					ACE237E81A9846BA002588CB = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = ACE237D31A9846BA002588CB;
+					};
+				};
+			};
+			buildConfigurationList = ACE237CF1A9846BA002588CB /* Build configuration list for PBXProject "Gradient Background Generator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACE237CB1A9846BA002588CB;
+			productRefGroup = ACE237D51A9846BA002588CB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACE237D31A9846BA002588CB /* Gradient Background Generator */,
+				ACE237E81A9846BA002588CB /* Gradient Background GeneratorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACE237D21A9846BA002588CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE237DF1A9846BA002588CB /* Main.storyboard in Resources */,
+				ACE237E41A9846BA002588CB /* LaunchScreen.xib in Resources */,
+				ACE237E11A9846BA002588CB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACE237E71A9846BA002588CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACE237D01A9846BA002588CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE237DC1A9846BA002588CB /* ViewController.swift in Sources */,
+				ACE237DA1A9846BA002588CB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACE237E51A9846BA002588CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE237F01A9846BA002588CB /* Gradient_Background_GeneratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACE237EB1A9846BA002588CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACE237D31A9846BA002588CB /* Gradient Background Generator */;
+			targetProxy = ACE237EA1A9846BA002588CB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACE237DD1A9846BA002588CB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACE237DE1A9846BA002588CB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ACE237E21A9846BA002588CB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACE237E31A9846BA002588CB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACE237F11A9846BA002588CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACE237F21A9846BA002588CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACE237F41A9846BA002588CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Gradient Background Generator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ACE237F51A9846BA002588CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Gradient Background Generator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ACE237F71A9846BA002588CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Gradient Background GeneratorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gradient Background Generator.app/Gradient Background Generator";
+			};
+			name = Debug;
+		};
+		ACE237F81A9846BA002588CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Gradient Background GeneratorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gradient Background Generator.app/Gradient Background Generator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACE237CF1A9846BA002588CB /* Build configuration list for PBXProject "Gradient Background Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACE237F11A9846BA002588CB /* Debug */,
+				ACE237F21A9846BA002588CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACE237F31A9846BA002588CB /* Build configuration list for PBXNativeTarget "Gradient Background Generator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACE237F41A9846BA002588CB /* Debug */,
+				ACE237F51A9846BA002588CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ACE237F61A9846BA002588CB /* Build configuration list for PBXNativeTarget "Gradient Background GeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACE237F71A9846BA002588CB /* Debug */,
+				ACE237F81A9846BA002588CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACE237CC1A9846BA002588CB /* Project object */;
+}
