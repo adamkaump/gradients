@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ACB8BD5F1A9C0BD80075FD76 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD5E1A9C0BD80075FD76 /* GradientView.swift */; };
+		ACB8BD641A9C10E60075FD76 /* UIColor+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD631A9C10E60075FD76 /* UIColor+random.swift */; };
+		ACB8BD671A9C12390075FD76 /* NSString+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD661A9C12390075FD76 /* NSString+Style.swift */; };
+		ACB8BD691A9C165A0075FD76 /* ShareOrBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD681A9C165A0075FD76 /* ShareOrBuyViewController.swift */; };
 		ACE237DA1A9846BA002588CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE237D91A9846BA002588CB /* AppDelegate.swift */; };
 		ACE237DC1A9846BA002588CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE237DB1A9846BA002588CB /* ViewController.swift */; };
 		ACE237DF1A9846BA002588CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACE237DD1A9846BA002588CB /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		ACB8BD5E1A9C0BD80075FD76 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		ACB8BD631A9C10E60075FD76 /* UIColor+random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+random.swift"; sourceTree = "<group>"; };
+		ACB8BD661A9C12390075FD76 /* NSString+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Style.swift"; sourceTree = "<group>"; };
+		ACB8BD681A9C165A0075FD76 /* ShareOrBuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareOrBuyViewController.swift; sourceTree = "<group>"; };
 		ACE237D41A9846BA002588CB /* Gradient Background Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gradient Background Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE237D81A9846BA002588CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACE237D91A9846BA002588CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +64,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ACB8BD601A9C0E840075FD76 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ACE237DB1A9846BA002588CB /* ViewController.swift */,
+				ACB8BD681A9C165A0075FD76 /* ShareOrBuyViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		ACB8BD611A9C0E900075FD76 /* Subclasses */ = {
+			isa = PBXGroup;
+			children = (
+				ACB8BD5E1A9C0BD80075FD76 /* GradientView.swift */,
+			);
+			name = Subclasses;
+			sourceTree = "<group>";
+		};
+		ACB8BD621A9C0F600075FD76 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ACE237DD1A9846BA002588CB /* Main.storyboard */,
+				ACE237E21A9846BA002588CB /* LaunchScreen.xib */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		ACB8BD651A9C10EE0075FD76 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACB8BD631A9C10E60075FD76 /* UIColor+random.swift */,
+				ACB8BD661A9C12390075FD76 /* NSString+Style.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		ACE237CB1A9846BA002588CB = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +120,12 @@
 		ACE237D61A9846BA002588CB /* Gradient Background Generator */ = {
 			isa = PBXGroup;
 			children = (
+				ACB8BD651A9C10EE0075FD76 /* Extensions */,
+				ACB8BD621A9C0F600075FD76 /* Storyboards */,
+				ACB8BD611A9C0E900075FD76 /* Subclasses */,
+				ACB8BD601A9C0E840075FD76 /* View Controllers */,
 				ACE237D91A9846BA002588CB /* AppDelegate.swift */,
-				ACE237DB1A9846BA002588CB /* ViewController.swift */,
-				ACE237DD1A9846BA002588CB /* Main.storyboard */,
 				ACE237E01A9846BA002588CB /* Images.xcassets */,
-				ACE237E21A9846BA002588CB /* LaunchScreen.xib */,
 				ACE237D71A9846BA002588CB /* Supporting Files */,
 			);
 			path = "Gradient Background Generator";
@@ -161,6 +205,7 @@
 				TargetAttributes = {
 					ACE237D31A9846BA002588CB = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = ESTSFRM646;
 					};
 					ACE237E81A9846BA002588CB = {
 						CreatedOnToolsVersion = 6.2;
@@ -212,8 +257,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACB8BD641A9C10E60075FD76 /* UIColor+random.swift in Sources */,
 				ACE237DC1A9846BA002588CB /* ViewController.swift in Sources */,
 				ACE237DA1A9846BA002588CB /* AppDelegate.swift in Sources */,
+				ACB8BD5F1A9C0BD80075FD76 /* GradientView.swift in Sources */,
+				ACB8BD691A9C165A0075FD76 /* ShareOrBuyViewController.swift in Sources */,
+				ACB8BD671A9C12390075FD76 /* NSString+Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +338,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -326,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,6 +387,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Gradient Background Generator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Gradient Background Generator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -407,6 +458,7 @@
 				ACE237F51A9846BA002588CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACE237F61A9846BA002588CB /* Build configuration list for PBXNativeTarget "Gradient Background GeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +467,7 @@
 				ACE237F81A9846BA002588CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
