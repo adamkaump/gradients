@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var adjustButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet var gradientView: GradientView!
+    @IBOutlet weak var okImageView: UIImageView!
     
     var backgroundsGenerated = 0
     
@@ -50,6 +51,9 @@ class ViewController: UIViewController {
         self.gradientView.gradientLayer.removeFromSuperlayer()
         self.gradientView.layer.insertSublayer(gradient, atIndex: 0)
         self.gradientView.gradientLayer = gradient
+        
+        self.saveButton.alpha = 1;
+        self.okImageView.alpha = 0;
     }
     
     @IBAction func save(sender: AnyObject) {
@@ -62,7 +66,14 @@ class ViewController: UIViewController {
         
         //save
         ALAssetsLibrary.addImage(image, metaData:nil, toAlbum:"Gradient Backgrounds", handler: { (success) -> Void in
-            print("saved")
+            
+            UIView.animateWithDuration(0.1, animations: { () -> Void in
+                self.saveButton.alpha = 0;
+            }, completion: { (Bool) -> Void in
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
+                    self.okImageView.alpha = 1;
+                })
+            })
         })
     }
 }

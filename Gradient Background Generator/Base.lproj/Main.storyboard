@@ -62,6 +62,13 @@
                                             <action selector="generateNewBackground" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vio-oR-odb"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ok" translatesAutoresizingMaskIntoConstraints="NO" id="4LP-kB-OjH">
+                                        <rect key="frame" x="275" y="333" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="VdA-xn-bTL"/>
+                                            <constraint firstAttribute="height" constant="50" id="dPF-kW-B6F"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="mAh-XM-9vx" firstAttribute="leading" secondItem="vys-gE-2nL" secondAttribute="leading" id="0Ci-qg-ZwZ"/>
@@ -71,7 +78,9 @@
                                     <constraint firstAttribute="trailing" secondItem="mAh-XM-9vx" secondAttribute="trailing" id="FOQ-Oo-83r"/>
                                     <constraint firstItem="UE2-wf-v0T" firstAttribute="top" secondItem="B5e-jO-OPN" secondAttribute="bottom" id="Orf-NB-uhR"/>
                                     <constraint firstItem="mAh-XM-9vx" firstAttribute="height" secondItem="B5e-jO-OPN" secondAttribute="height" id="PnO-K4-E0H"/>
+                                    <constraint firstItem="mAh-XM-9vx" firstAttribute="centerY" secondItem="4LP-kB-OjH" secondAttribute="centerY" id="PyD-rK-16z"/>
                                     <constraint firstItem="B5e-jO-OPN" firstAttribute="height" secondItem="mAh-XM-9vx" secondAttribute="height" id="SqM-T4-4dQ"/>
+                                    <constraint firstItem="mAh-XM-9vx" firstAttribute="centerX" secondItem="4LP-kB-OjH" secondAttribute="centerX" id="Wet-WE-tPl"/>
                                     <constraint firstItem="B5e-jO-OPN" firstAttribute="top" secondItem="vys-gE-2nL" secondAttribute="top" id="Y9Y-OO-3pU"/>
                                     <constraint firstItem="mAh-XM-9vx" firstAttribute="height" secondItem="UE2-wf-v0T" secondAttribute="height" id="puR-Nr-1Nb"/>
                                     <constraint firstAttribute="trailing" secondItem="B5e-jO-OPN" secondAttribute="trailing" id="rmv-Bb-wsT"/>
@@ -94,6 +103,7 @@
                     <connections>
                         <outlet property="adjustButton" destination="UE2-wf-v0T" id="OyH-Z4-uYC"/>
                         <outlet property="gradientView" destination="8bC-Xf-vdC" id="kjS-fg-PYW"/>
+                        <outlet property="okImageView" destination="4LP-kB-OjH" id="rQA-Ny-Yd8"/>
                         <outlet property="randomButton" destination="B5e-jO-OPN" id="TmD-Fe-Yg2"/>
                         <outlet property="saveButton" destination="mAh-XM-9vx" id="6Ph-7r-4jO"/>
                         <outlet property="titleLabel" destination="M6V-lm-HU8" id="4QY-Dy-axh"/>
@@ -312,6 +322,7 @@
         <image name="back" width="50" height="50"/>
         <image name="gb background" width="512" height="512"/>
         <image name="money" width="50" height="50"/>
+        <image name="ok" width="100" height="100"/>
         <image name="share" width="50" height="50"/>
     </resources>
 </document>
