@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC6F0EB71A9D770200B39484 /* ALAssetsLibrary+Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F0EB61A9D770200B39484 /* ALAssetsLibrary+Album.swift */; };
 		ACB8BD5F1A9C0BD80075FD76 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD5E1A9C0BD80075FD76 /* GradientView.swift */; };
 		ACB8BD641A9C10E60075FD76 /* UIColor+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD631A9C10E60075FD76 /* UIColor+random.swift */; };
 		ACB8BD671A9C12390075FD76 /* NSString+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD661A9C12390075FD76 /* NSString+Style.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC6F0EB61A9D770200B39484 /* ALAssetsLibrary+Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALAssetsLibrary+Album.swift"; sourceTree = "<group>"; };
 		ACB8BD5E1A9C0BD80075FD76 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		ACB8BD631A9C10E60075FD76 /* UIColor+random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+random.swift"; sourceTree = "<group>"; };
 		ACB8BD661A9C12390075FD76 /* NSString+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Style.swift"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				ACB8BD631A9C10E60075FD76 /* UIColor+random.swift */,
 				ACB8BD661A9C12390075FD76 /* NSString+Style.swift */,
+				AC6F0EB61A9D770200B39484 /* ALAssetsLibrary+Album.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				ACB8BD641A9C10E60075FD76 /* UIColor+random.swift in Sources */,
 				ACE237DC1A9846BA002588CB /* ViewController.swift in Sources */,
 				ACE237DA1A9846BA002588CB /* AppDelegate.swift in Sources */,
+				AC6F0EB71A9D770200B39484 /* ALAssetsLibrary+Album.swift in Sources */,
 				ACB8BD5F1A9C0BD80075FD76 /* GradientView.swift in Sources */,
 				ACB8BD691A9C165A0075FD76 /* ShareOrBuyViewController.swift in Sources */,
 				ACB8BD671A9C12390075FD76 /* NSString+Style.swift in Sources */,

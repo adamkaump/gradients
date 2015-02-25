@@ -54,45 +54,16 @@ class ViewController: UIViewController {
     
     @IBAction func save(sender: AnyObject) {
         
-        var library = ALAssetsLibrary()
-        var albumName = "Gradient Backgrounds"
+        //generate image
+        UIGraphicsBeginImageContext(self.gradientView.gradientLayer.frame.size)
+        self.gradientView.gradientLayer.renderInContext(UIGraphicsGetCurrentContext())
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         
-        library.addAssetsGroupAlbumWithName(albumName, resultBlock: { (group) -> Void in
-            UIGraphicsBeginImageContext(self.gradientView.gradientLayer.frame.size)
-            self.gradientView.gradientLayer.renderInContext(UIGraphicsGetCurrentContext())
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            
-            library.enumerateGroupsWithTypes(ALAssetsGroupAlbum, usingBlock: { (group: ALAssetsGroup!, stop: UnsafeMutablePointer<ObjCBool>) -> Void in
-                
-                if(group != nil) {
-                    if group!.valueForProperty(ALAssetsGroupPropertyName) as String == albumName {
-                        
-                        var metaData = NSDictionary()
-                        library.writeImageToSavedPhotosAlbum(image.CGImage, metadata:metaData, completionBlock: {(assetURL:NSURL!,error:NSError!) -> Void in
-                            
-                            if (error == nil) {
-                                
-                                library.assetForURL(assetURL,
-                                    resultBlock: { (asset: ALAsset!) -> Void in
-                                        group.addAsset(asset)
-                                        return
-                                    },
-                                    failureBlock: { (error2: NSError!) -> Void in
-                                    
-                                    }
-                                )
-                            }
-                        });
-                    }
-                }
-            }, failureBlock: { (error: NSError!) -> Void in
-                
-            })
-            
-        }) { (NSError) -> Void in
-            print("Error")
-        }
+        //save
+        ALAssetsLibrary.addImage(image, metaData:nil, toAlbum:"Gradient Backgrounds", handler: { (success) -> Void in
+            print("saved")
+        })
     }
 }
 
