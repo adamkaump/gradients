@@ -21,14 +21,19 @@ class ShareOrBuyViewController: UIViewController {
         buyLabel.attributedText = NSString.attributedStringForText(buyLabel.text!)
         shareLabel.attributedText = NSString.attributedStringForText(shareLabel.text!)
         backLabel.attributedText = NSString.attributedStringForText(backLabel.text!)
+        
+        Flurry.logEvent("Buy Screen Shown")
     }
     
     @IBAction func goBack() {
         self.navigationController?.popToRootViewControllerAnimated(true)
+        Flurry.logEvent("Buy Screen Exited")
     }
     
     @IBAction func buy() {
         
+        //TODO
+        Flurry.logEvent("App Purchased")
     }
     
     @IBAction func share() {
@@ -54,7 +59,14 @@ class ShareOrBuyViewController: UIViewController {
         activityViewController.excludedActivityTypes = [UIActivityTypeCopyToPasteboard]
         activityViewController.completionWithItemsHandler = {
             (s: String!, ok: Bool, items: [AnyObject]!, err:NSError!) -> Void in
-            println("completed \(s) \(ok) \(items) \(err)")
+            
+            if ok {
+                let parameters = ["Via": items]
+                Flurry.logEvent("App Shared", withParameters: parameters)
+            } else {
+                Flurry.logEvent("App Share Canceled")
+            }
+            
         }
         self.presentViewController(activityViewController, animated: true, completion: nil)
         

@@ -4,7 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Gradient Background Generator.xcscheme</key>
+		<key>Gradient Backgrounds Dev.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Gradient Backgrounds.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>AC9B178B1AA24465001CA5B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>ACE237D31A9846BA002588CB</key>
 		<dict>
 			<key>primary</key>

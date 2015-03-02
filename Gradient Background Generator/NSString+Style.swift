@@ -9,10 +9,10 @@
 import UIKit
 
 extension NSString {
-    class func attributedStringForText(text: NSString) -> NSAttributedString {
+    class func attributedStringForText(text: String) -> NSAttributedString {
         var attributeString = NSMutableAttributedString(string: text)
-        attributeString.addAttribute(NSStrokeColorAttributeName, value: UIColor.blackColor(), range: NSRange(location: 0, length: text.length))
-        attributeString.addAttribute(NSStrokeWidthAttributeName, value: -2, range: NSRange(location: 0, length: text.length))
+        attributeString.addAttribute(NSStrokeColorAttributeName, value: UIColor.blackColor(), range: NSRange(location: 0, length: countElements(text)))
+        attributeString.addAttribute(NSStrokeWidthAttributeName, value: -2, range: NSRange(location: 0, length: countElements(text)))
 
         return attributeString
     }

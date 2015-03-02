@@ -32,11 +32,13 @@ class ViewController: UIViewController {
     @IBAction func generateBackgroundButtonTapped() {
         
         //validation
-        if (backgroundsGenerated > 20) {
+        let backgroundsGenerated = Tracker.backgroundsGenerated()
+        let proVersionPurchased = Tracker.proVersionIsPurchased()
+        if (backgroundsGenerated >= 20 || proVersionPurchased) {
             self.performSegueWithIdentifier("shareOrBuySegue", sender: nil)
             return
         }
-        backgroundsGenerated++;
+        Tracker.incrementBackgroundsGenerated()
         
         //generate a new background
         self.generateNewBackground()
@@ -44,12 +46,14 @@ class ViewController: UIViewController {
     
     func generateNewBackground() {
         
+        Flurry.logEvent("Background Generated")
+        
         let primaryColor = UIColor.randomColor().CGColor
         let secondaryColor = UIColor.randomColor().CGColor
-        
         let gradient: CAGradientLayer = CAGradientLayer()
         
-        gradient.colors = [primaryColor, secondaryColor]
+        let colorsArray : NSArray = [primaryColor, secondaryColor]
+        gradient.colors = colorsArray
         gradient.locations = [0.0 , 1.0]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
         gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
@@ -59,6 +63,7 @@ class ViewController: UIViewController {
         self.transitionView.layer.insertSublayer(gradient, atIndex: 0)
         self.transitionView.alpha = 0
         
+        self.randomButton.userInteractionEnabled = false
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             self.transitionView.alpha = 1
             }) { (Bool) -> Void in
@@ -66,6 +71,7 @@ class ViewController: UIViewController {
                 self.gradientView.layer.insertSublayer(gradient, atIndex: 0)
                 self.gradientView.gradientLayer = gradient
                 self.transitionView.alpha = 0
+                    self.randomButton.userInteractionEnabled = true
         }
         
         //animate away the ok button
@@ -80,6 +86,8 @@ class ViewController: UIViewController {
     
     @IBAction func save(sender: AnyObject) {
         
+        Flurry.logEvent("Image Saved")
+        
         //generate image
         UIGraphicsBeginImageContext(self.gradientView.gradientLayer.frame.size)
         self.gradientView.gradientLayer.renderInContext(UIGraphicsGetCurrentContext())
@@ -87,10 +95,16 @@ class ViewController: UIViewController {
         UIGraphicsEndImageContext()
         
         //save
-        ALAssetsLibrary.addImage(image, metaData:nil, toAlbum:"Gradient Backgrounds", handler: { (success) -> Void in
-            
-            UIView.animateWithDuration(0.1, animations: { () -> Void in
-                self.saveButton.alpha = 0;
+        ALAssetsLibrary.addImage(image, metaData:nil, albumName:"Gradient Backgrounds", handler: { (success) -> Void in
+            if !success! {
+                self.showErrorMessage()
+                var timer = NSTimer.scheduledTimerWithTimeInterval(0.7, target: self, selector: Selector("resetSaveButton"), userInfo: nil, repeats: false)
+            }
+        })
+        
+        //assume image saved for animation
+        UIView.animateWithDuration(0.1, animations: { () -> Void in
+            self.saveButton.alpha = 0;
             }, completion: { (Bool) -> Void in
                 
                 let center = self.okImageView.center
@@ -103,11 +117,20 @@ class ViewController: UIViewController {
                     self.okImageView.frame.size = CGSize(width: 50, height: 50)
                     self.okImageView.center = center
                     
-                }, completion: { (Bool) -> Void in
-                    
+                    }, completion: { (Bool) -> Void in
                 })
-            })
         })
+    }
+    
+    func showErrorMessage() {
+        var alert = UIAlertController(title: "Error", message: "Unable to save. Please make sure permission is granted in Settings > Privacy > Photos", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func resetSaveButton() {
+        self.okImageView.alpha = 0
+        self.saveButton.alpha = 1
     }
 }
 

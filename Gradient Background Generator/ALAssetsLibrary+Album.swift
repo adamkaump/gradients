@@ -12,7 +12,7 @@ import AssetsLibrary
 extension ALAssetsLibrary {
     
     typealias CompletionHandler = (success:Bool!) -> Void
-    class func addImage(image:UIImage, metaData:NSDictionary?, toAlbum albumName:String, handler:CompletionHandler){
+    class func addImage(image:UIImage, metaData:NSDictionary?, albumName:String, handler:CompletionHandler){
         
         var library = ALAssetsLibrary()
         library.addAssetsGroupAlbumWithName(albumName, resultBlock: {(group:ALAssetsGroup!) -> Void in
