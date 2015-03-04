@@ -22,6 +22,8 @@ class ShareOrBuyViewController: UIViewController {
         shareLabel.attributedText = NSString.attributedStringForText(shareLabel.text!)
         backLabel.attributedText = NSString.attributedStringForText(backLabel.text!)
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"productPurchased", name: IAPHelperProductPurchaseNotification, object: nil)
+        
         Flurry.logEvent("Buy Screen Shown")
     }
     
@@ -31,8 +33,7 @@ class ShareOrBuyViewController: UIViewController {
     }
     
     @IBAction func buy() {
-        
-        //TODO
+        Tracker.buyProVersion()
         Flurry.logEvent("App Purchased")
     }
     
@@ -69,6 +70,9 @@ class ShareOrBuyViewController: UIViewController {
             
         }
         self.presentViewController(activityViewController, animated: true, completion: nil)
-        
+    }
+    
+    func productPurchased() {
+        self.navigationController?.popToRootViewControllerAnimated(true)
     }
 }

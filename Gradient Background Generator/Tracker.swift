@@ -28,12 +28,11 @@ class Tracker {
     }
     
     class func proVersionIsPurchased() -> Bool {
-        let productString = "psfgbiap001"
-        let products = NSSet(array: [productString])
-        let iapHelper = MFIAPHelper(productIdentifiers: products)
-        let purchasedProducts = iapHelper.purchasedProductIdentifiers
         
-        if (purchasedProducts.containsObject(productString)) {
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let purchasedProducts = appDelegate.iapHelper!.purchasedProductIdentifiers
+        
+        if (purchasedProducts.containsObject(Constants.proVersionIapId)) {
              return true
         } else {
             return false
@@ -41,11 +40,10 @@ class Tracker {
     }
 
     class func buyProVersion() {
-        let productString = "psfgbiap001"
-        let products = NSSet(array: [productString])
-        let iapHelper = MFIAPHelper(productIdentifiers: products)
         
-        let product = SKProduct()
-        iapHelper.buyProduct(product)
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let iapHelper = appDelegate.iapHelper!
+        let proVersion = appDelegate.iapProducts!.firstObject as SKProduct
+        iapHelper.buyProduct(proVersion)
     }
 }

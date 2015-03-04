@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         //validation
         let backgroundsGenerated = Tracker.backgroundsGenerated()
         let proVersionPurchased = Tracker.proVersionIsPurchased()
-        if (backgroundsGenerated >= 20 || proVersionPurchased) {
+        if (backgroundsGenerated >= 20 && !proVersionPurchased) {
             self.performSegueWithIdentifier("shareOrBuySegue", sender: nil)
             return
         }
