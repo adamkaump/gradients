@@ -10,6 +10,8 @@ import UIKit
 import StoreKit
 
 let IAPHelperProductPurchaseNotification = "In-App Purchase Product Notification"
+let IAPHelperProductPurchaseFailNotification = "IAPHelperProductPurchaseFailNotification"
+let IAPHelperProductRestoreFailNotification = "IAPHelperProductRestoreFailNotification"
 
 typealias RequestProductCompletionHandler =  (success: Bool, products: NSArray) -> ()
 
@@ -98,6 +100,7 @@ class MFIAPHelper: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
         if transaction.error.code != SKErrorPaymentCancelled {
             println("Transaction error = \(transaction.error.localizedDescription)")
         }
+        NSNotificationCenter.defaultCenter().postNotificationName(IAPHelperProductPurchaseFailNotification, object: nil)
         SKPaymentQueue.defaultQueue().finishTransaction(transaction)
     }
     func restoreTransaction(transaction: SKPaymentTransaction) {
@@ -111,6 +114,7 @@ class MFIAPHelper: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
         NSUserDefaults.standardUserDefaults().setBool(true, forKey: productIdentifier)
         NSUserDefaults.standardUserDefaults().synchronize()
         NSNotificationCenter.defaultCenter().postNotificationName(IAPHelperProductPurchaseNotification, object: productIdentifier)
+        Flurry.logEvent("IAP Purchased")
     }
     
     func restoreCompletedTransactions() {
@@ -119,6 +123,7 @@ class MFIAPHelper: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
     
     func paymentQueue(queue: SKPaymentQueue!, restoreCompletedTransactionsFailedWithError error: NSError!) {
         println("\(error.localizedDescription)")
+        NSNotificationCenter.defaultCenter().postNotificationName(IAPHelperProductRestoreFailNotification, object: nil)
     }
     
     func paymentQueueRestoreCompletedTransactionsFinished(queue: SKPaymentQueue!) {
@@ -142,6 +147,7 @@ class MFIAPHelper: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
         }
         else {
             println("Your purchases have been successfully restored")
+            Flurry.logEvent("IAP Restored")
         }
     }
    
@@ -160,9 +166,9 @@ class MFIAPHelper: NSObject, SKPaymentTransactionObserver, SKProductsRequestDele
         }
         
     }
+    
     func request(request: SKRequest!, didFailWithError error: NSError!) {
         println("Falied to load list of products")
         println("Error: \(error.localizedDescription)")
-        
     }
 }

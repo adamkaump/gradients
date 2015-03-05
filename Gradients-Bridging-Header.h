@@ -11,6 +11,6 @@
 
 
 #import "Flurry.h"
-
+#import "SVProgressHUD.h"
 
 #endif

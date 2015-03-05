@@ -32,6 +32,12 @@
 		ACB8BD691A9C165A0075FD76 /* ShareOrBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD681A9C165A0075FD76 /* ShareOrBuyViewController.swift */; };
 		ACCD2FE31AA6AA6B00506FC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD2FE21AA6AA6B00506FC7 /* Constants.swift */; };
 		ACCD2FE41AA6AA6B00506FC7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCD2FE21AA6AA6B00506FC7 /* Constants.swift */; };
+		ACCD2FEC1AA8077B00506FC7 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCD2FE71AA8077B00506FC7 /* SVIndefiniteAnimatedView.m */; };
+		ACCD2FED1AA8077B00506FC7 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCD2FE71AA8077B00506FC7 /* SVIndefiniteAnimatedView.m */; };
+		ACCD2FEE1AA8077B00506FC7 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACCD2FE91AA8077B00506FC7 /* SVProgressHUD.bundle */; };
+		ACCD2FEF1AA8077B00506FC7 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ACCD2FE91AA8077B00506FC7 /* SVProgressHUD.bundle */; };
+		ACCD2FF01AA8077B00506FC7 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCD2FEB1AA8077B00506FC7 /* SVProgressHUD.m */; };
+		ACCD2FF11AA8077B00506FC7 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = ACCD2FEB1AA8077B00506FC7 /* SVProgressHUD.m */; };
 		ACD5F0091AA422570024A8E2 /* MFIAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5F0081AA422570024A8E2 /* MFIAPHelper.swift */; };
 		ACD5F00A1AA422570024A8E2 /* MFIAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD5F0081AA422570024A8E2 /* MFIAPHelper.swift */; };
 		ACE237DA1A9846BA002588CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE237D91A9846BA002588CB /* AppDelegate.swift */; };
@@ -68,6 +74,12 @@
 		ACB8BD661A9C12390075FD76 /* NSString+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Style.swift"; sourceTree = "<group>"; };
 		ACB8BD681A9C165A0075FD76 /* ShareOrBuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareOrBuyViewController.swift; sourceTree = "<group>"; };
 		ACCD2FE21AA6AA6B00506FC7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ACCD2FE61AA8077B00506FC7 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		ACCD2FE71AA8077B00506FC7 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		ACCD2FE81AA8077B00506FC7 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		ACCD2FE91AA8077B00506FC7 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		ACCD2FEA1AA8077B00506FC7 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		ACCD2FEB1AA8077B00506FC7 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		ACD5F0081AA422570024A8E2 /* MFIAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFIAPHelper.swift; sourceTree = "<group>"; };
 		ACE237D41A9846BA002588CB /* GB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE237D81A9846BA002588CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				AC9B178A1AA242FC001CA5B7 /* Flurry */,
+				ACCD2FE51AA8077A00506FC7 /* SVProgressHUD */,
 				AC1FABFC1AA419F500144BB4 /* StoreKit.framework */,
 				AC9B17881AA242E5001CA5B7 /* SystemConfiguration.framework */,
 				AC9B17861AA242B6001CA5B7 /* CFNetwork.framework */,
@@ -168,6 +181,19 @@
 				ACD5F0081AA422570024A8E2 /* MFIAPHelper.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		ACCD2FE51AA8077A00506FC7 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				ACCD2FE61AA8077B00506FC7 /* SVIndefiniteAnimatedView.h */,
+				ACCD2FE71AA8077B00506FC7 /* SVIndefiniteAnimatedView.m */,
+				ACCD2FE81AA8077B00506FC7 /* SVProgressHUD-Prefix.pch */,
+				ACCD2FE91AA8077B00506FC7 /* SVProgressHUD.bundle */,
+				ACCD2FEA1AA8077B00506FC7 /* SVProgressHUD.h */,
+				ACCD2FEB1AA8077B00506FC7 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		ACE237CB1A9846BA002588CB = {
@@ -347,6 +373,7 @@
 				AC9B17981AA24465001CA5B7 /* Main.storyboard in Resources */,
 				AC9B17991AA24465001CA5B7 /* LaunchScreen.xib in Resources */,
 				AC9B179A1AA24465001CA5B7 /* Images.xcassets in Resources */,
+				ACCD2FEF1AA8077B00506FC7 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +384,7 @@
 				ACE237DF1A9846BA002588CB /* Main.storyboard in Resources */,
 				ACE237E41A9846BA002588CB /* LaunchScreen.xib in Resources */,
 				ACE237E11A9846BA002588CB /* Images.xcassets in Resources */,
+				ACCD2FEE1AA8077B00506FC7 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,10 +407,12 @@
 				AC9B178F1AA24465001CA5B7 /* AppDelegate.swift in Sources */,
 				AC9B17901AA24465001CA5B7 /* ALAssetsLibrary+Album.swift in Sources */,
 				AC1FABFB1AA4112000144BB4 /* Tracker.swift in Sources */,
+				ACCD2FF11AA8077B00506FC7 /* SVProgressHUD.m in Sources */,
 				ACCD2FE41AA6AA6B00506FC7 /* Constants.swift in Sources */,
 				AC9B17911AA24465001CA5B7 /* GradientView.swift in Sources */,
 				AC9B17921AA24465001CA5B7 /* ShareOrBuyViewController.swift in Sources */,
 				ACD5F00A1AA422570024A8E2 /* MFIAPHelper.swift in Sources */,
+				ACCD2FED1AA8077B00506FC7 /* SVIndefiniteAnimatedView.m in Sources */,
 				AC9B17931AA24465001CA5B7 /* NSString+Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,10 +426,12 @@
 				ACE237DA1A9846BA002588CB /* AppDelegate.swift in Sources */,
 				AC6F0EB71A9D770200B39484 /* ALAssetsLibrary+Album.swift in Sources */,
 				AC1FABFA1AA4112000144BB4 /* Tracker.swift in Sources */,
+				ACCD2FF01AA8077B00506FC7 /* SVProgressHUD.m in Sources */,
 				ACCD2FE31AA6AA6B00506FC7 /* Constants.swift in Sources */,
 				ACB8BD5F1A9C0BD80075FD76 /* GradientView.swift in Sources */,
 				ACB8BD691A9C165A0075FD76 /* ShareOrBuyViewController.swift in Sources */,
 				ACD5F0091AA422570024A8E2 /* MFIAPHelper.swift in Sources */,
+				ACCD2FEC1AA8077B00506FC7 /* SVIndefiniteAnimatedView.m in Sources */,
 				ACB8BD671A9C12390075FD76 /* NSString+Style.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

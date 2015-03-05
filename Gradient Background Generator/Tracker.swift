@@ -40,7 +40,6 @@ class Tracker {
     }
 
     class func buyProVersion() {
-        
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let iapHelper = appDelegate.iapHelper!
         let proVersion = appDelegate.iapProducts!.firstObject as SKProduct

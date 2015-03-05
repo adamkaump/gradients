@@ -23,6 +23,8 @@ class ShareOrBuyViewController: UIViewController {
         backLabel.attributedText = NSString.attributedStringForText(backLabel.text!)
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector:"productPurchased", name: IAPHelperProductPurchaseNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"productPurchaseFailed", name: IAPHelperProductPurchaseFailNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"iapRestoreFailed", name: IAPHelperProductRestoreFailNotification, object: nil)
         
         Flurry.logEvent("Buy Screen Shown")
     }
@@ -32,8 +34,21 @@ class ShareOrBuyViewController: UIViewController {
         Flurry.logEvent("Buy Screen Exited")
     }
     
+    @IBAction func restoreInAppPurchases(sender: AnyObject) {
+        SVProgressHUD.showWithMaskType(SVProgressHUDMaskTypeBlack)
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let iapHelper = appDelegate.iapHelper!
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            iapHelper.restoreCompletedTransactions()
+        })
+    }
+    
+    
     @IBAction func buy() {
-        Tracker.buyProVersion()
+        SVProgressHUD.showWithMaskType(SVProgressHUDMaskTypeBlack)
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { () -> Void in
+            Tracker.buyProVersion()
+        })
     }
     
     @IBAction func share() {
@@ -72,7 +87,27 @@ class ShareOrBuyViewController: UIViewController {
     }
     
     func productPurchased() {
-        Flurry.logEvent("App Purchased")
-        self.navigationController?.popToRootViewControllerAnimated(true)
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            SVProgressHUD.dismiss()
+            self.navigationController?.popToRootViewControllerAnimated(true)
+        })
+    }
+    
+    func productPurchaseFailed() {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            SVProgressHUD.dismiss()
+            var alert = UIAlertController(title: "Error", message: "Unable to purchase. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        })
+    }
+    
+    func iapRestoreFailed() {
+        dispatch_async(dispatch_get_main_queue(), { () -> Void in
+            SVProgressHUD.dismiss()
+            var alert = UIAlertController(title: "Error", message: "Unable to restore. Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        })
     }
 }
