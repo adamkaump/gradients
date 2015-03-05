@@ -34,7 +34,6 @@ class ShareOrBuyViewController: UIViewController {
     
     @IBAction func buy() {
         Tracker.buyProVersion()
-        Flurry.logEvent("App Purchased")
     }
     
     @IBAction func share() {
@@ -73,6 +72,7 @@ class ShareOrBuyViewController: UIViewController {
     }
     
     func productPurchased() {
+        Flurry.logEvent("App Purchased")
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
 }
