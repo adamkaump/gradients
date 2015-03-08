@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var randomButton: UIButton!
     @IBOutlet weak var adjustButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet var gradientView: GradientView!
+    @IBOutlet var gradientView: UIView!
     @IBOutlet weak var transitionView: GradientView!
     @IBOutlet weak var okImageView: UIImageView!
     
@@ -36,6 +36,8 @@ class ViewController: UIViewController {
         let proVersionPurchased = Tracker.proVersionIsPurchased()
         var hasSharedAppToday = Tracker.hasSharedAppToday()
         
+        hasSharedAppToday = true
+        
         if (backgroundsGenerated >= 20 && !(proVersionPurchased || hasSharedAppToday)) {
             self.performSegueWithIdentifier("shareOrBuySegue", sender: nil)
             return
@@ -47,33 +49,29 @@ class ViewController: UIViewController {
     }
     
     func generateNewBackground() {
+
+        var newGradientView = GradientView()
+        newGradientView.frame = self.view.frame
         
-        Flurry.logEvent("Background Generated")
-        
-        let primaryColor = UIColor.randomColor().CGColor
-        let secondaryColor = UIColor.randomColor().CGColor
-        let gradient: CAGradientLayer = CAGradientLayer()
-        
-        let colorsArray : NSArray = [primaryColor, secondaryColor]
-        gradient.colors = colorsArray
-        gradient.locations = [0.0 , 1.0]
-        gradient.startPoint = CGPoint(x: 0.0, y: 0.0)
-        gradient.endPoint = CGPoint(x: 0.0, y: 1.0)
-        gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: self.view.frame.size.height)
-        
-        self.transitionView.gradientLayer.removeFromSuperlayer()
-        self.transitionView.layer.insertSublayer(gradient, atIndex: 0)
+        let subviews = self.transitionView.subviews
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
+        self.transitionView.addSubview(newGradientView)
         self.transitionView.alpha = 0
         
         self.randomButton.userInteractionEnabled = false
         UIView.animateWithDuration(0.5, animations: { () -> Void in
             self.transitionView.alpha = 1
             }) { (Bool) -> Void in
-                self.gradientView.gradientLayer.removeFromSuperlayer()
-                self.gradientView.layer.insertSublayer(gradient, atIndex: 0)
-                self.gradientView.gradientLayer = gradient
+                
+                for subview in self.gradientView.subviews {
+                    subview.removeFromSuperview()
+                }
+                newGradientView.autoresizingMask = UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
+                self.gradientView.addSubview(newGradientView)
                 self.transitionView.alpha = 0
-                    self.randomButton.userInteractionEnabled = true
+                self.randomButton.userInteractionEnabled = true
         }
         
         //animate away the ok button
@@ -84,6 +82,8 @@ class ViewController: UIViewController {
                     self.saveButton.alpha = 1
                 })
         }
+        
+        Flurry.logEvent("Background Generated")
     }
     
     @IBAction func save(sender: AnyObject) {
@@ -91,10 +91,7 @@ class ViewController: UIViewController {
         Flurry.logEvent("Image Saved")
         
         //generate image
-        UIGraphicsBeginImageContext(self.gradientView.gradientLayer.frame.size)
-        self.gradientView.gradientLayer.renderInContext(UIGraphicsGetCurrentContext())
-        let image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
+        let image = self.gradientView.subviews[0].image()
         
         //save
         ALAssetsLibrary.addImage(image, metaData:nil, albumName:"Gradient Backgrounds", handler: { (success) -> Void in

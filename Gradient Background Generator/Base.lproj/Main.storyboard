@@ -13,15 +13,21 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="GradientView" customModule="GB" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gb background" translatesAutoresizingMaskIntoConstraints="NO" id="rnq-IF-iTW">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rBM-37-D3D">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="APk-md-dyP" userLabel="Transition View" customClass="GradientView" customModule="GB" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gradient Background Generator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6V-lm-HU8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gradient Backgrounds" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6V-lm-HU8">
                                 <rect key="frame" x="16" y="40" width="568" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="cZu-e8-Ggq"/>
@@ -78,22 +84,30 @@
                             </view>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="rBM-37-D3D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="5Gh-Vp-cOn"/>
+                            <constraint firstAttribute="trailing" secondItem="rnq-IF-iTW" secondAttribute="trailing" id="5mI-3N-1No"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rnq-IF-iTW" secondAttribute="bottom" id="7vv-DZ-fBg"/>
                             <constraint firstItem="M6V-lm-HU8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Bew-PT-JYb"/>
                             <constraint firstItem="vys-gE-2nL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="C7a-cQ-X8O"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rBM-37-D3D" secondAttribute="bottom" id="FYR-2S-FCI"/>
                             <constraint firstItem="APk-md-dyP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="G5y-0O-Pwi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vys-gE-2nL" secondAttribute="bottom" id="HLh-AT-7ee"/>
                             <constraint firstAttribute="trailing" secondItem="vys-gE-2nL" secondAttribute="trailing" id="KVN-89-8Xf"/>
                             <constraint firstItem="APk-md-dyP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PDf-qs-HnT"/>
                             <constraint firstItem="vys-gE-2nL" firstAttribute="top" secondItem="M6V-lm-HU8" secondAttribute="bottom" constant="80" id="UxB-gC-NVa"/>
+                            <constraint firstItem="rBM-37-D3D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XHo-1K-6jh"/>
                             <constraint firstAttribute="trailing" secondItem="M6V-lm-HU8" secondAttribute="trailing" constant="16" id="d6D-5V-iv0"/>
                             <constraint firstItem="M6V-lm-HU8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="dyq-Bd-Vte"/>
+                            <constraint firstItem="rnq-IF-iTW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="h5n-1b-9o3"/>
+                            <constraint firstAttribute="trailing" secondItem="rBM-37-D3D" secondAttribute="trailing" id="mgs-bg-QmY"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="APk-md-dyP" secondAttribute="bottom" id="rwM-KP-6yy"/>
+                            <constraint firstItem="rnq-IF-iTW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xRQ-y7-THI"/>
                             <constraint firstAttribute="trailing" secondItem="APk-md-dyP" secondAttribute="trailing" id="zq8-Wn-gIg"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Bh-aC-bit"/>
                     <connections>
-                        <outlet property="gradientView" destination="8bC-Xf-vdC" id="kjS-fg-PYW"/>
+                        <outlet property="gradientView" destination="rBM-37-D3D" id="s9F-a4-FKX"/>
                         <outlet property="okImageView" destination="4LP-kB-OjH" id="rQA-Ny-Yd8"/>
                         <outlet property="randomButton" destination="UE2-wf-v0T" id="3D5-KE-c0l"/>
                         <outlet property="saveButton" destination="mAh-XM-9vx" id="6Ph-7r-4jO"/>

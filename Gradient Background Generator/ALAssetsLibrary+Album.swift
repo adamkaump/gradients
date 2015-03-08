@@ -29,7 +29,7 @@ extension ALAssetsLibrary {
                             
                             //                        print("\nGroup Found \(group!.valueForProperty(ALAssetsGroupPropertyName))\n");
                             
-                            library.writeImageToSavedPhotosAlbum(image.CGImage, metadata:metaData, completionBlock: {(assetURL:NSURL!,error:NSError!) -> Void in
+                            library.writeImageDataToSavedPhotosAlbum(UIImagePNGRepresentation(image), metadata:metaData, completionBlock: {(assetURL:NSURL!,error:NSError!) -> Void in
                                 
                                 if(error == nil){
                                     library.assetForURL(assetURL,

@@ -12,6 +12,8 @@
 		AC1FABFD1AA419F500144BB4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FABFC1AA419F500144BB4 /* StoreKit.framework */; };
 		AC1FABFE1AA41A0600144BB4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1FABFC1AA419F500144BB4 /* StoreKit.framework */; };
 		AC6F0EB71A9D770200B39484 /* ALAssetsLibrary+Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6F0EB61A9D770200B39484 /* ALAssetsLibrary+Album.swift */; };
+		AC75752F1AACFCED00FBFCBA /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75752E1AACFCED00FBFCBA /* UIView+Image.swift */; };
+		AC7575301AACFCED00FBFCBA /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC75752E1AACFCED00FBFCBA /* UIView+Image.swift */; };
 		AC9B17841AA24124001CA5B7 /* libFlurry_6.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9B17831AA24124001CA5B7 /* libFlurry_6.2.0.a */; };
 		AC9B17891AA242E5001CA5B7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC9B17881AA242E5001CA5B7 /* SystemConfiguration.framework */; };
 		AC9B178D1AA24465001CA5B7 /* UIColor+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8BD631A9C10E60075FD76 /* UIColor+random.swift */; };
@@ -62,6 +64,7 @@
 		AC1FABF91AA4112000144BB4 /* Tracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		AC1FABFC1AA419F500144BB4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		AC6F0EB61A9D770200B39484 /* ALAssetsLibrary+Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ALAssetsLibrary+Album.swift"; sourceTree = "<group>"; };
+		AC75752E1AACFCED00FBFCBA /* UIView+Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Image.swift"; sourceTree = "<group>"; };
 		AC9B17821AA24124001CA5B7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
 		AC9B17831AA24124001CA5B7 /* libFlurry_6.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_6.2.0.a; sourceTree = "<group>"; };
 		AC9B17851AA241A6001CA5B7 /* Gradients-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Gradients-Bridging-Header.h"; path = "../Gradients-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -179,6 +182,7 @@
 				ACB8BD661A9C12390075FD76 /* NSString+Style.swift */,
 				AC6F0EB61A9D770200B39484 /* ALAssetsLibrary+Album.swift */,
 				ACD5F0081AA422570024A8E2 /* MFIAPHelper.swift */,
+				AC75752E1AACFCED00FBFCBA /* UIView+Image.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -407,6 +411,7 @@
 				AC9B178F1AA24465001CA5B7 /* AppDelegate.swift in Sources */,
 				AC9B17901AA24465001CA5B7 /* ALAssetsLibrary+Album.swift in Sources */,
 				AC1FABFB1AA4112000144BB4 /* Tracker.swift in Sources */,
+				AC7575301AACFCED00FBFCBA /* UIView+Image.swift in Sources */,
 				ACCD2FF11AA8077B00506FC7 /* SVProgressHUD.m in Sources */,
 				ACCD2FE41AA6AA6B00506FC7 /* Constants.swift in Sources */,
 				AC9B17911AA24465001CA5B7 /* GradientView.swift in Sources */,
@@ -426,6 +431,7 @@
 				ACE237DA1A9846BA002588CB /* AppDelegate.swift in Sources */,
 				AC6F0EB71A9D770200B39484 /* ALAssetsLibrary+Album.swift in Sources */,
 				AC1FABFA1AA4112000144BB4 /* Tracker.swift in Sources */,
+				AC75752F1AACFCED00FBFCBA /* UIView+Image.swift in Sources */,
 				ACCD2FF01AA8077B00506FC7 /* SVProgressHUD.m in Sources */,
 				ACCD2FE31AA6AA6B00506FC7 /* Constants.swift in Sources */,
 				ACB8BD5F1A9C0BD80075FD76 /* GradientView.swift in Sources */,
