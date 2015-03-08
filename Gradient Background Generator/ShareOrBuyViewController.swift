@@ -52,7 +52,7 @@ class ShareOrBuyViewController: UIViewController {
     }
     
     @IBAction func share() {
-        self.shareTextImageAndURL(sharingText: "Check out Gradient Backgrounds for iOS",
+        self.shareTextImageAndURL(sharingText: "Check out Gradient Backgrounds for iOS: www.gradientbackgrounds.co",
             sharingImage: nil,
             sharingURL: nil)
     }
@@ -76,7 +76,9 @@ class ShareOrBuyViewController: UIViewController {
             (s: String!, ok: Bool, items: [AnyObject]!, err:NSError!) -> Void in
             
             if ok {
-                let parameters = ["Via": items]
+                Tracker.sharedApp()
+                self.navigationController?.popToRootViewControllerAnimated(true)
+                let parameters = ["Via": s]
                 Flurry.logEvent("App Shared", withParameters: parameters)
             } else {
                 Flurry.logEvent("App Share Canceled")

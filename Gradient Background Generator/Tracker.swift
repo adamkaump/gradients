@@ -27,6 +27,24 @@ class Tracker {
         return backgroundsGenerated!
     }
     
+    class func hasSharedAppToday() -> Bool {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+
+        if let lastAppShareDate = userDefaults.valueForKey("lastAppShareDate") as NSDate? {
+            let today = NSDate()
+            let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
+            let dif = calendar.compareDate(lastAppShareDate, toDate: today, toUnitGranularity: NSCalendarUnit.DayCalendarUnit)
+            return dif == NSComparisonResult.OrderedSame
+        } else {
+            return false
+        }
+    }
+    
+    class func sharedApp() {
+        var userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setValue(NSDate(), forKey: "lastAppShareDate")
+    }
+    
     class func proVersionIsPurchased() -> Bool {
         
         let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate

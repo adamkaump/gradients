@@ -34,10 +34,12 @@ class ViewController: UIViewController {
         //validation
         let backgroundsGenerated = Tracker.backgroundsGenerated()
         let proVersionPurchased = Tracker.proVersionIsPurchased()
-//        if (backgroundsGenerated >= 20 && !proVersionPurchased) {
+        var hasSharedAppToday = Tracker.hasSharedAppToday()
+        
+        if (backgroundsGenerated >= 20 && !(proVersionPurchased || hasSharedAppToday)) {
             self.performSegueWithIdentifier("shareOrBuySegue", sender: nil)
             return
-//        }
+        }
         Tracker.incrementBackgroundsGenerated()
         
         //generate a new background
