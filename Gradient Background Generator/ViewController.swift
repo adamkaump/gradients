@@ -36,8 +36,6 @@ class ViewController: UIViewController {
         let proVersionPurchased = Tracker.proVersionIsPurchased()
         var hasSharedAppToday = Tracker.hasSharedAppToday()
         
-        hasSharedAppToday = true
-        
         if (backgroundsGenerated >= 20 && !(proVersionPurchased || hasSharedAppToday)) {
             self.performSegueWithIdentifier("shareOrBuySegue", sender: nil)
             return
